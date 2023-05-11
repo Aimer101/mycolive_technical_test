@@ -9,7 +9,7 @@
             <div class="page-name">
                 <h1>Trivia Game</h1>
             </div>
-            <div class="result-container">
+            <div class="result-page-container">
                 <div class="top">
                     <h2>Congratulation {INSERT_USERNAME_HERE} </h2>
                 </div>
@@ -23,9 +23,12 @@
                 </div>
 
                 <div class="redirect">
-                    <a class = "button-redirect" href = "/">
-                        Do you want to try again?
-                    </a>
+                    <form action="{{ route('quiz.retry') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="retry">
+                            Retry Quiz
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

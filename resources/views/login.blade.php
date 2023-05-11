@@ -4,7 +4,7 @@
 <body>
     <div class="container">
         <div class="wrapper">
-            <form class="auth-container" method="POST" action="{{ route('login') }}">
+            <form class="auth-container" method="POST" action="{{ route('quiz.submit') }}">
                 {{ csrf_field() }}
 
                 <div class="page-title">
